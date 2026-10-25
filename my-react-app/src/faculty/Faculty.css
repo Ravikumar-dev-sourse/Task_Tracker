@@ -1,0 +1,374 @@
+
+/* ===== Faculty Top Navigation ===== */
+.faculty-top-nav {
+  height: 76px;
+  padding: 0 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #e9e7f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.faculty-nav-brand,
+.faculty-nav-right,
+.faculty-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.faculty-nav-brand {
+  gap: 12px;
+}
+
+.faculty-nav-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #4b347b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-nav-title h1 {
+  margin: 0;
+  font-size: 21px;
+  color: #241b38;
+  font-weight: 700;
+}
+
+.faculty-nav-title p {
+  margin: 4px 0 0;
+  color: #8b8499;
+  font-size: 12px;
+}
+
+.faculty-nav-right {
+  gap: 22px;
+}
+
+.faculty-notification-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ece9f2;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #625578;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.faculty-notification-btn:hover {
+  background: #f5f2fa;
+}
+
+.faculty-user-info {
+  gap: 10px;
+}
+
+.faculty-user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eee8fa;
+  color: #4b347b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-user-text h3 {
+  margin: 0;
+  color: #29213b;
+  font-size: 14px;
+}
+
+.faculty-user-text p {
+  margin: 4px 0 0;
+  color: #898296;
+  font-size: 12px;
+}
+
+/* ===== Faculty Sidebar ===== */
+.faculty-sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 16px;
+  background: #ffffff;
+  border-right: 1px solid #eae7f1;
+}
+
+.faculty-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 28px;
+  border-bottom: 1px solid #eeeaf4;
+}
+
+.faculty-sidebar-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: #4b347b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-sidebar-brand h2 {
+  margin: 0;
+  font-size: 17px;
+  color: #29213b;
+}
+
+.faculty-sidebar-brand p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #91899f;
+}
+
+.faculty-sidebar-label {
+  margin: 26px 10px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #9b94aa;
+}
+
+.faculty-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.faculty-sidebar-link {
+  min-height: 46px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #706780;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.faculty-sidebar-link:hover {
+  background: #f6f3fb;
+  color: #4b347b;
+}
+
+.faculty-sidebar-link.active {
+  background: #4b347b;
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(75, 52, 123, 0.16);
+}
+
+.faculty-sidebar-bottom {
+  margin-top: auto;
+}
+
+.faculty-help-card {
+  padding: 15px 13px;
+  margin-bottom: 15px;
+  border: 1px solid #eee8f8;
+  border-radius: 12px;
+  background: #f8f6fc;
+}
+
+.faculty-help-title {
+  margin: 0 0 7px;
+  color: #4b347b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.faculty-help-card p:last-child {
+  margin: 0;
+  color: #7c738d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.faculty-logout-btn {
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 13px;
+  border: 1px solid #f4dede;
+  border-radius: 10px;
+  background: #fff7f7;
+  color: #d33a3a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faculty-logout-btn:hover {
+  background: #feecec;
+}
+
+/* ===== Logout Popup ===== */
+.faculty-logout-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(24, 18, 38, 0.55);
+}
+
+.faculty-logout-popup {
+  width: 100%;
+  max-width: 370px;
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: faculty-popup-in 0.2s ease-out;
+}
+
+.faculty-logout-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-logout-popup h3 {
+  margin: 0 0 10px;
+  color: #241b38;
+  font-size: 20px;
+}
+
+.faculty-logout-popup > p {
+  margin: 0 0 24px;
+  color: #777084;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faculty-logout-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.faculty-logout-actions button {
+  flex: 1;
+  padding: 11px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faculty-cancel-btn {
+  background: #f1eff5;
+  color: #50475f;
+}
+
+.faculty-cancel-btn:hover {
+  background: #e7e2ef;
+}
+
+.faculty-confirm-btn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.faculty-confirm-btn:hover {
+  background: #b91c1c;
+}
+
+@keyframes faculty-popup-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .faculty-sidebar {
+    width: 215px;
+    padding: 18px 12px;
+  }
+
+  .faculty-top-nav {
+    padding: 0 16px;
+  }
+
+  .faculty-nav-title h1 {
+    font-size: 18px;
+  }
+
+  .faculty-nav-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-sidebar {
+    width: 76px;
+    padding: 18px 10px;
+  }
+
+  .faculty-sidebar-brand {
+    justify-content: center;
+    padding: 0 0 22px;
+  }
+
+  .faculty-sidebar-brand > div:last-child,
+  .faculty-sidebar-label,
+  .faculty-sidebar-link span,
+  .faculty-sidebar-bottom .faculty-help-card,
+  .faculty-logout-btn span {
+    display: none;
+  }
+
+  .faculty-sidebar-link,
+  .faculty-logout-btn {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .faculty-nav-title p,
+  .faculty-user-text {
+    display: none;
+  }
+}

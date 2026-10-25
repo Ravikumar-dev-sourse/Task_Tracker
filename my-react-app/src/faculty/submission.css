@@ -1,0 +1,643 @@
+
+.faculty-submissions-page,
+.faculty-submissions-page * {
+  box-sizing: border-box;
+}
+
+.faculty-submissions-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 24px;
+  background: transparent;
+  color: #252238;
+  font-family: inherit;
+  overflow-x: clip;
+}
+
+.submission-page-header {
+  margin: 0 0 22px;
+}
+
+.submission-page-header h1 {
+  margin: 0 0 7px;
+  color: #29213e;
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.3;
+  font-weight: 750;
+}
+
+.submission-page-header p {
+  margin: 0;
+  color: #777387;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.faculty-submission-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.faculty-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 17px;
+  background: #fff;
+  border: 1px solid #eceaf3;
+  border-radius: 13px;
+  box-shadow: 0 4px 15px rgb(38 28 75 / 4%);
+}
+
+.faculty-summary-icon {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+}
+
+.total-icon { color: #6941c6; background: #f0eaff; }
+.pending-icon { color: #a36b15; background: #fff4d9; }
+.reviewed-icon { color: #21845b; background: #e3f8ed; }
+.resubmit-icon { color: #c4485b; background: #ffeaed; }
+
+.faculty-summary-card p {
+  margin: 0 0 6px;
+  color: #797588;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.faculty-summary-card h2 {
+  margin: 0;
+  color: #29213e;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.faculty-submission-content {
+  width: 100%;
+  min-width: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #eceaf3;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgb(38 28 75 / 4%);
+}
+
+.faculty-submission-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 17px;
+}
+
+.faculty-submission-content-header h2 {
+  margin: 0 0 5px;
+  color: #29213e;
+  font-size: 18px;
+}
+
+.faculty-submission-content-header p {
+  margin: 0;
+  color: #858095;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.faculty-submission-content-header > span {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  color: #6842bb;
+  background: #f1ebff;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.faculty-submission-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 17px;
+}
+
+.faculty-submission-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 9px;
+  min-width: 0;
+  padding: 0 12px;
+  color: #918ba2;
+  background: #fbfaff;
+  border: 1px solid #e6e2ef;
+  border-radius: 9px;
+}
+
+.faculty-submission-search:focus-within {
+  border-color: #8060cf;
+  box-shadow: 0 0 0 3px rgb(128 96 207 / 10%);
+}
+
+.faculty-submission-search input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #302b40;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+}
+
+.faculty-filter-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 9px 12px;
+  color: #6842bb;
+  background: #fff;
+  border: 1px solid #dcd3f1;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.faculty-filter-reset:hover {
+  background: #f5f0ff;
+  border-color: #b7a5e4;
+}
+
+.faculty-filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 10px;
+  color: #4d4268;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.faculty-submission-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 21px;
+  padding: 14px;
+  background: #faf9fd;
+  border: 1px solid #efedf5;
+  border-radius: 11px;
+}
+
+.faculty-submission-filter-grid label,
+.faculty-review-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  color: #514b63;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.faculty-submission-filter-grid select,
+.faculty-review-field select,
+.faculty-review-field input,
+.faculty-review-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 9px 10px;
+  color: #342d48;
+  background: #fff;
+  border: 1px solid #e1ddeb;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 450;
+}
+
+.faculty-submission-filter-grid select {
+  cursor: pointer;
+}
+
+.faculty-submission-filter-grid select:focus,
+.faculty-review-field select:focus,
+.faculty-review-field input:focus,
+.faculty-review-field textarea:focus {
+  border-color: #8060cf;
+  box-shadow: 0 0 0 3px rgb(128 96 207 / 9%);
+}
+
+.faculty-submission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faculty-submission-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ebe8f2;
+  border-radius: 12px;
+}
+
+.faculty-submission-card:hover {
+  border-color: #d6c9f2;
+  box-shadow: 0 4px 13px rgb(38 28 75 / 5%);
+}
+
+.faculty-submission-file-icon {
+  display: grid;
+  flex: 0 0 42px;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #7048c6;
+  background: #f0eaff;
+  border-radius: 10px;
+}
+
+.faculty-submission-information {
+  flex: 1;
+  min-width: 0;
+}
+
+.faculty-submission-information h3 {
+  margin: 1px 0 5px;
+  color: #302744;
+  font-size: 15px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.faculty-submission-filename {
+  margin: 0 0 9px;
+  color: #7a718d;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.faculty-submission-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.faculty-submission-meta span {
+  padding: 4px 7px;
+  color: #645080;
+  background: #f6f2ff;
+  border: 1px solid #eee7ff;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.faculty-submission-date {
+  display: block;
+  color: #9993a5;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.faculty-submission-marks {
+  margin: 8px 0 0;
+  color: #24805b;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.faculty-submission-feedback-preview {
+  margin: 7px 0 0;
+  color: #686078;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.faculty-submission-actions {
+  display: flex;
+  flex: 0 0 142px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+}
+
+.faculty-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 5px;
+  max-width: 100%;
+  padding: 6px 8px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.faculty-status-pending { color: #9a650c; background: #fff5d9; }
+.faculty-status-reviewed { color: #17784d; background: #e2f7eb; }
+.faculty-status-resubmit { color: #b83248; background: #ffeaee; }
+
+.faculty-submission-action-button,
+.faculty-review-button,
+.faculty-review-open-file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faculty-submission-action-button {
+  color: #6943ba;
+  background: #fff;
+  border: 1px solid #dcd2f2;
+}
+
+.faculty-submission-action-button:hover:not(:disabled) {
+  background: #f5f0ff;
+}
+
+.faculty-review-button,
+.faculty-review-save {
+  color: #fff;
+  background: #6b46c1;
+  border: 1px solid #6b46c1;
+}
+
+.faculty-review-button:hover,
+.faculty-review-save:hover {
+  background: #5835a9;
+}
+
+.faculty-submission-action-button:disabled,
+.faculty-review-open-file:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.faculty-submission-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 18px;
+  color: #9289a4;
+  text-align: center;
+}
+
+.faculty-submission-empty > svg {
+  margin-bottom: 12px;
+  color: #a18bd5;
+}
+
+.faculty-submission-empty h3 {
+  margin: 0 0 8px;
+  color: #39304c;
+  font-size: 16px;
+}
+
+.faculty-submission-empty p {
+  max-width: 420px;
+  margin: 0 0 14px;
+  color: #858095;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Review modal */
+.faculty-review-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgb(27 20 44 / 55%);
+  backdrop-filter: blur(3px);
+}
+
+.faculty-review-modal {
+  width: min(540px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #eee9f6;
+  border-radius: 14px;
+  box-shadow: 0 22px 70px rgb(20 13 36 / 25%);
+}
+
+.faculty-review-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 20px 22px;
+  border-bottom: 1px solid #eeeaf4;
+}
+
+.faculty-review-modal-header h2 {
+  margin: 0 0 6px;
+  color: #302642;
+  font-size: 19px;
+}
+
+.faculty-review-modal-header p {
+  margin: 0;
+  color: #8a8298;
+  font-size: 12px;
+}
+
+.faculty-review-close {
+  display: grid;
+  flex: 0 0 34px;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: #766d86;
+  background: #f6f4fa;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.faculty-review-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 20px 22px;
+}
+
+.faculty-review-file {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px;
+  color: #7049be;
+  background: #f8f5ff;
+  border: 1px solid #ece4fc;
+  border-radius: 9px;
+}
+
+.faculty-review-file strong {
+  display: block;
+  color: #41344f;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.faculty-review-file p {
+  margin: 5px 0 0;
+  color: #898097;
+  font-size: 11px;
+}
+
+.faculty-review-open-file {
+  align-self: flex-start;
+  color: #6943ba;
+  background: #fff;
+  border: 1px solid #dcd2f2;
+}
+
+.faculty-review-marks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.faculty-review-field textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.faculty-review-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding: 15px 22px;
+  background: #fbfaff;
+  border-top: 1px solid #eeeaf4;
+}
+
+.faculty-review-cancel,
+.faculty-review-save {
+  min-height: 38px;
+  padding: 9px 15px;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.faculty-review-cancel {
+  color: #6e667d;
+  background: #fff;
+  border: 1px solid #e1dce9;
+}
+
+@media (max-width: 1150px) {
+  .faculty-submission-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faculty-submission-filter-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .faculty-submissions-page { padding: 16px; }
+  .faculty-submission-content { padding: 16px; }
+
+  .faculty-submission-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faculty-submission-card { flex-wrap: wrap; }
+
+  .faculty-submission-information {
+    flex-basis: calc(100% - 58px);
+  }
+
+  .faculty-submission-actions {
+    flex: 1 0 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 11px;
+    border-top: 1px solid #f0edf5;
+  }
+
+  .faculty-submission-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-submissions-page { padding: 12px; }
+
+  .faculty-submission-summary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .faculty-submission-content { padding: 13px; }
+
+  .faculty-submission-content-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .faculty-submission-filter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 11px;
+  }
+
+  .faculty-review-overlay { padding: 9px; }
+
+  .faculty-review-modal-header,
+  .faculty-review-modal-body {
+    padding: 16px;
+  }
+
+  .faculty-review-modal-footer { padding: 13px 16px; }
+
+  .faculty-review-marks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
